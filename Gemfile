@@ -10,7 +10,8 @@ gem 'pg'
 group :test, :development do
   gem 'rspec-rails'
   gem 'guard-rspec'
-
+  gem 'guard-spork'
+  gem 'spork'
 end
 
 gem 'twitter-bootstrap-rails'
