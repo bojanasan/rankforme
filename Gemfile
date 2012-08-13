@@ -12,6 +12,7 @@ group :test, :development do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'spork'
+  gem 'capybara'
 end
 
 gem 'twitter-bootstrap-rails'

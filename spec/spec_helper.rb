@@ -3,7 +3,7 @@ require 'spork'
 require 'capybara/rspec'
 require 'simplecov'
 
-SimpleCox.start 'rails'
+SimpleCov.start 'rails'
 
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'

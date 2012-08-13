@@ -8,10 +8,7 @@ require "active_resource/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
-config.generators do |g|
-  g.test_framework      :rspec, :fixture => true
-  g.fixture_replacement :fabrication
-end
+
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -22,6 +19,10 @@ end
 
 module Rankforme
   class Application < Rails::Application
+  config.generators do |g|
+    g.test_framework      :rspec, :fixture => true
+    g.fixture_replacement :fabrication
+  end
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
