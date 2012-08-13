@@ -7,6 +7,14 @@ gem 'rails', '3.2.6'
 
 gem 'pg'
 
+group :test, :development do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+
+end
+
+gem 'twitter-bootstrap-rails'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
