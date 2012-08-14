@@ -1,4 +1,8 @@
 Rankforme::Application.routes.draw do
+
+  devise_for :problems
+
+  root :to => "problems#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
