@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120815221726) do
+ActiveRecord::Schema.define(:version => 20120815230020) do
 
   create_table "choices", :force => true do |t|
     t.string   "description"
@@ -27,6 +27,11 @@ ActiveRecord::Schema.define(:version => 20120815221726) do
     t.string   "factorable_type"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "fake_things", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "problems", :force => true do |t|
