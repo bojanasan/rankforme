@@ -53,5 +53,5 @@ production:
   encoding: unicode
   database: rankforme_production
   pool: 5
-  username: rankforme
+  username:
   password:
