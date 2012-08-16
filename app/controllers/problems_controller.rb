@@ -1,10 +1,14 @@
 class ProblemsController < ApplicationController
+  before_filter :authenticate_user!
+
   def index
-    @problems = Problem.all
+    @user = current_user
+    @problems = @user.problems
   end
 
   def show
     @problem = Problem.find(params[:id])
+    # @user = User.find(@problem.user_id)
   end
 
   def new
@@ -17,6 +21,7 @@ class ProblemsController < ApplicationController
 
   def create
     @problem = Problem.new(params[:problem])
+    @problem.user = current_user
     if @problem.save
       redirect_to @problem, notice: 'Problem was successfully created.'
     else
