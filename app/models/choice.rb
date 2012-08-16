@@ -3,4 +3,5 @@ class Choice < ActiveRecord::Base
   has_many :factors, :as => :factorable
   belongs_to :problem
   belongs_to :user
+
 end

@@ -2,13 +2,11 @@ class ProblemsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @user = current_user
-    @problems = @user.problems
+    @problems = current_user.problems
   end
 
   def show
     @problem = Problem.find(params[:id])
-    # @user = User.find(@problem.user_id)
   end
 
   def new
