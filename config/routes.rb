@@ -1,4 +1,18 @@
 Rankforme::Application.routes.draw do
+  get "factors/index"
+
+  get "factors/show"
+
+  get "factors/new"
+
+  get "factors/edit"
+
+  get "factors/create"
+
+  get "factors/update"
+
+  get "factors/destroy"
+
   root :to => 'problems#index'
   devise_for :users
   resources :problems
